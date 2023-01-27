@@ -1,0 +1,100 @@
+#include<iostream>
+using namespace std;
+
+struct toko{
+    string nama;
+};
+
+void program ()
+{   
+    int totala, totalb, totalc, totalharga1, totalharga2, totalharga3;
+    int gow = 680000 , tales = 350000 , nier = 100000;
+    float diskona, diskonb;
+    char  ulang, abjad, bayar;
+    string pin;
+
+    cout << "List Game" << endl;
+    string game [3] = {"1.God Of War Ragnarok = Rp. 680.000","2.Tales Of Arise = Rp. 350.000","3.Nier Automata = Rp. 100.000"};
+        for(int i=0;i<=3;i++){
+            cout << game[i] << endl;
+        }
+do{
+    cout << "Masukan Judul Game Yang Ingin Dibeli : "; cin >> abjad;
+    system ("cls");
+    totalharga1 = gow;
+    totalharga2 = tales;
+    totalharga3 = nier;
+
+    if (abjad == '1'){
+        (totalharga1 == 500000);
+        diskona = totalharga1 * 0.15;
+        totala = totalharga1 - diskona;
+        cout << "=========================\n";
+        cout << "Harga normal: Rp." << gow << endl;
+        cout << "Selamat Anda Mendapat Diskon 15%\n" << endl;
+        cout << "Total Yang Harus Dibayar (Diskon) : Rp." << totala << endl;
+    }
+    else if (abjad == '2'){
+        (totalharga2 == 350000);
+        diskonb = totalharga2 * 0.5;
+        totalb = totalharga2 - diskonb;
+        cout << "=========================\n";
+        cout << "Harga Normal: Rp." << tales << endl;
+        cout << "Selamat Anda Mendapat Diskon 5%" << endl;
+        cout << "Total Yang Harus Dibayar (Diskon) : Rp." << totalb << endl;
+    }
+    else if (abjad == '3'){
+        (totalharga3 <= 250000);
+        totalc = totalharga3;
+        cout << "=========================\n";
+        cout << "Maaf Cuy Cuma Dapat Harga Normal" << endl;
+        cout << "Harga Normal : Rp." << totalc << endl;
+        cout << "Total Yang Harus Dibayar : Rp." << totalc << endl;
+    }
+     cout << "Konfirmasi pembayaran? (Y/T)", cin >> ulang;
+     system ("cls");
+    }
+    while(ulang == 'Y' || ulang == 't');
+
+    cout << endl;
+    cout << "============================================\n" << endl;
+    cout << "Pilih metode pembayaran:\n ";
+    cout << "A. OVO/DANA/GOPAY/QRIS (E-money) \n ";
+    cout << "B. Rekening Bank \n";
+    cout << " C. Cash On Delivery \n";
+    cout << "Masukan Metode Pembayaran : "; cin >> bayar;
+    cout << "============================================\n" << endl;
+    system ("cls");
+    if (bayar == 'a'){
+        cout << "Pembayaran menggunakan E-money " << endl;
+        cout << "Masukan Pin E-money anda: "; cin >> pin;
+        cout << "Pesanan Terkonfirmasi" << endl;
+    }
+    else if (bayar == 'b'){
+        cout << "Pembayaran menggunakan Rekening Bank " << endl;
+        cout << "Masukan Pin Rekening anda: "; cin >> pin;
+        cout << "Pesanan Terkonfirmasi" << endl;
+    }
+    else if (bayar == 'c'){
+        cout << "Pembayaran menggunakan Cash On Delivery " << endl;
+        cout << "Pesanan Terkonfirmasi" << endl;
+    }
+
+    cout << "============================================\n" << endl;
+    cout << "Terimakasih Telah Berbelanja Di Toko Kami ^^" << endl;
+    cout << "============================================\n" << endl;
+
+}
+
+int main(){
+
+    toko data_1;
+
+    data_1.nama="Toko Game Pacolita";
+
+    cout << "Selamat Datang Di " << data_1.nama << endl;
+
+    program ();
+
+    return 0;
+}
